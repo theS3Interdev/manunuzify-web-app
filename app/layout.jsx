@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { App } from "@/components/index";
 
 import ThemeProvider from "@/lib/providers/theme-provider";
+import StoreProvider from "@/lib/providers/store-provider";
 
 import "@/app/styles/globals.css";
 import "@smastrom/react-rating/style.css";
@@ -26,10 +27,12 @@ const RootLayout = ({ children }) => {
           enableSystem
           disableTransitionOnChange
         >
-          <App>
-            {children}
-            <Analytics />
-          </App>
+          <StoreProvider>
+            <App>
+              {children}
+              <Analytics />
+            </App>
+          </StoreProvider>
         </ThemeProvider>
       </body>
     </html>
