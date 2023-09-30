@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const DisplayImage = ({ imageSrc, imageAlt }) => {
+const ImageDisplay = ({ imageSrc, imageAlt }) => {
   return (
     <Image
       src={imageSrc}
@@ -14,4 +14,4 @@ const DisplayImage = ({ imageSrc, imageAlt }) => {
   );
 };
 
-export default DisplayImage;
+export default ImageDisplay;
