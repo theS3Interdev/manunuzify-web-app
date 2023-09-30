@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useSelector } from "react-redux";
 import { useTheme } from "next-themes";
 import { Moon, ShoppingCart, Sun } from "lucide-react";
 
@@ -16,6 +17,8 @@ import { AppSidebar, Container, UserProfileButton } from "@/components/index";
 
 const AppHeader = () => {
   const { setTheme } = useTheme();
+
+  const { loading, cartItems } = useSelector((state) => state.cart);
 
   return (
     <div className="border-b px-4 py-3 sm:flex sm:justify-between">
@@ -42,7 +45,9 @@ const AppHeader = () => {
             <Button variant="ghost" className="mr-2">
               <Link href="/cart" className="flex">
                 <ShoppingCart className="h-6 w-6" />
-                <Badge variant="destructive">0</Badge>
+                <Badge variant="destructive">
+                  {loading ? "" : cartItems.reduce((a, c) => a + c.quantity, 0)}
+                </Badge>
               </Link>
             </Button>
             {/* shopping cart button end */}

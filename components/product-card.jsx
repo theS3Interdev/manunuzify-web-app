@@ -1,8 +1,11 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { ImageDisplay, ProductRating } from "@/components/index";
+import {
+  AddToCartButton,
+  ImageDisplay,
+  ProductRating,
+} from "@/components/index";
 
 const ProductCard = ({ product }) => {
   return (
@@ -31,7 +34,12 @@ const ProductCard = ({ product }) => {
             })}
           </div>
           <div className="w-full py-2">
-            <Button>Add to Cart</Button>
+            <AddToCartButton
+              increaseOnClick={true}
+              product={product}
+              redirect={false}
+              showQuantity={false}
+            />
           </div>
         </CardFooter>
       </Card>
