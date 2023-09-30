@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { DisplayImage, ProductRating } from "@/components/index";
+import { ImageDisplay, ProductRating } from "@/components/index";
 
 const ProductCard = ({ product }) => {
   return (
@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
         <CardContent className="pt-4">
           <div className="relative aspect-square rounded-lg bg-foreground/5 dark:bg-background">
             <Link href={`/product/${product.id}`}>
-              <DisplayImage imageSrc={product.image} imageAlt={product.name} />
+              <ImageDisplay imageSrc={product.image} imageAlt={product.name} />
             </Link>
           </div>
         </CardContent>

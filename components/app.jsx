@@ -1,12 +1,12 @@
 "use client";
 
-import { Header } from "@/components/index";
+import { AppHeader } from "@/components/index";
 
 const App = ({ children }) => {
   return (
     <>
       <header>
-        <Header />
+        <AppHeader />
       </header>
 
       <main>{children}</main>
