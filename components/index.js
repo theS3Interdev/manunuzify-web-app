@@ -1,3 +1,4 @@
+import AddToCartButton from "@/components/add-to-cart-button";
 import App from "@/components/app";
 import AppHeader from "@/components/app-header";
 import AppSidebar from "@/components/app-sidebar";
@@ -10,6 +11,7 @@ import ProductRating from "@/components/product-rating";
 import UserProfileButton from "@/components/user-profile-button";
 
 export {
+  AddToCartButton,
   App,
   AppHeader,
   AppSidebar,
