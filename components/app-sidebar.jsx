@@ -112,7 +112,7 @@ const AppSidebar = () => {
                     Remove
                   </Button>
 
-                  <Separator className="my-4" />
+                  <Separator className="my-4" orientation="horizontal" />
                 </div>
               ))}
             </div>
