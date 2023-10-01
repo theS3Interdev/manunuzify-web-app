@@ -42,14 +42,12 @@ const ProductDetailsPage = ({ params }) => {
         </h1>
 
         {/* return button start */}
-        <div className="p-4">
-          <Button asChild>
-            <Link href="/">
-              <ShoppingBag className="mr-2 h-4 w-4" />
-              Continue Shopping
-            </Link>
-          </Button>
-        </div>
+        <Button asChild className="mb-5">
+          <Link href="/">
+            <ShoppingBag className="mr-2 h-4 w-4" />
+            Continue Shopping
+          </Link>
+        </Button>
         {/* return button end */}
 
         {/* product grid start */}
