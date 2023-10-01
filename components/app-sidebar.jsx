@@ -7,6 +7,7 @@ import { Menu, ShoppingBag, ShoppingCart, Trash2 } from "lucide-react";
 import { addToCart, removeFromCart } from "@/lib/redux/slices/cart-slice";
 
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
   SheetClose,
@@ -105,11 +106,13 @@ const AppSidebar = () => {
                   <Button
                     onClick={() => removeFromCartHandler(item.id)}
                     variant="destructive"
-                    className="mt-3 w-full"
+                    className="mt-4 w-full"
                   >
                     <Trash2 className="mr-2 h-4 w-4" />
                     Remove
                   </Button>
+
+                  <Separator className="my-4" orientation="horizontal" />
                 </div>
               ))}
             </div>
