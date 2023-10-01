@@ -21,10 +21,10 @@ const AppHeader = () => {
   const { loading, cartItems } = useSelector((state) => state.cart);
 
   return (
-    <div className="border-b px-4 py-3 sm:flex sm:justify-between">
+    <div className="border-b px-2 py-3 sm:flex sm:justify-between">
       {/* header section start */}
       <Container>
-        <div className="relative flex h-16 w-full items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 w-full items-center justify-between px-2 sm:px-6 lg:px-8">
           <div className="flex items-center">
             {/* sidebar component section start */}
             <AppSidebar />
