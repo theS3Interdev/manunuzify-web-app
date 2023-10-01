@@ -5,7 +5,7 @@ const CheckoutWizard = ({ activeStep = 0 }) => {
         "Sign in",
         "Shipping Address Confirmation",
         "Payment Method Selection",
-        "Confirm Order",
+        "Order Confirmation",
       ].map((step, index) => (
         <div
           key={step}
