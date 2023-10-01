@@ -43,7 +43,7 @@ const PaymentSelectionPage = () => {
     <Container>
       <div className="p-4 sm:p-6 lg:p-8">
         <h1 className="mb-5 font-montserrat text-xl font-bold">
-          Payment Method Selection
+          Payment Method
         </h1>
 
         {/* checkout wizard start */}
