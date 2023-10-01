@@ -247,11 +247,7 @@ const OrderConfirmationPage = () => {
                         }
                         className="my-5 w-full"
                       >
-
                         Confirm Order
-
-           
-
                       </Button>
                     </div>
                   </div>
