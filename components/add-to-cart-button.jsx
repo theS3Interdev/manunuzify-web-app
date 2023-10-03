@@ -41,6 +41,8 @@ const AddToCartButton = ({
 
     dispatch(addToCart({ ...product, quantity: newQuantity }));
 
+    toast.success("Item has been added to the cart.");
+
     if (redirect) router.push("/cart");
   };
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, ShoppingBag, ShoppingCart, Trash2 } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 import { addToCart, removeFromCart } from "@/lib/redux/slices/cart-slice";
 
@@ -27,10 +28,12 @@ const AppSidebar = () => {
 
   const addToCartHandler = (product, quantity) => {
     dispatch(addToCart({ ...product, quantity }));
+    toast.success("Item has been added to the cart.");
   };
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
+    toast.success("Item has been removed from the cart.");
   };
 
   return (

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { ChevronRight, ShoppingBag, Trash2 } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 import { addToCart, removeFromCart } from "@/lib/redux/slices/cart-slice";
 
@@ -29,10 +30,12 @@ const ShoppingCartPage = () => {
 
   const addToCartHandler = (product, quantity) => {
     dispatch(addToCart({ ...product, quantity }));
+    toast.success("Item has been added to the cart.");
   };
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
+    toast.success("Item has been removed from the cart.");
   };
 
   return (
