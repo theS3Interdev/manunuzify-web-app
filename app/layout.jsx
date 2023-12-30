@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
-
 import { App } from "@/components/index";
 
 import ThemeProvider from "@/lib/providers/theme-provider";
@@ -32,7 +30,6 @@ const RootLayout = ({ children }) => {
             <App>
               <ToastProvider />
               {children}
-              <Analytics />
             </App>
           </StoreProvider>
         </ThemeProvider>
