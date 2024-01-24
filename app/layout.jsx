@@ -8,10 +8,6 @@ import "@/app/styles/globals.css";
 import "@smastrom/react-rating/style.css";
 
 export const metadata = {
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo/png",
-  },
   title: "Manunuzify",
   description: "Next.JS shopping cart.",
 };
